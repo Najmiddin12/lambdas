@@ -79,7 +79,7 @@
         "enable_cors": true,
         "POST": {
           "enable_proxy": true,
-          "authorization_type": "NONE",
+          "authorization_type": "authorizer",
           "integration_type": "lambda",
           "lambda_name": "api_handler",
           "api_key_required": false,
