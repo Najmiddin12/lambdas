@@ -45,7 +45,7 @@
     "resource_type": "iam_role",
     "tags": {}
   },
-  "simple-booking-userpool": {
+  "${booking_userpool}": {
     "resource_type": "cognito_idp",
     "password_policy": {
       "minimum_length": 12,
@@ -79,7 +79,7 @@
         "enable_cors": true,
         "POST": {
           "enable_proxy": true,
-          "authorization_type": "authorizer",
+          "authorization_type": "NONE",
           "integration_type": "lambda",
           "lambda_name": "api_handler",
           "api_key_required": false,
@@ -187,7 +187,7 @@
       }
     }
   },
-  "Tables": {
+  "${tables_table}": {
     "resource_type": "dynamodb_table",
     "hash_key_name": "id",
     "hash_key_type": "N",
@@ -197,7 +197,7 @@
     "autoscaling": [],
     "tags": {}
   },
-  "Reservations": {
+  "${reservations_table}": {
     "resource_type": "dynamodb_table",
     "hash_key_name": "id",
     "hash_key_type": "S",
